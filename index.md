@@ -5,18 +5,7 @@ title: Mapesche
 
 # Mapesche
 
-{% assign tagList = "" %}
-{%- for short in audioshorts -%}
-  {%- for taggy in short.tags -%}
-   {% assign tagList = tagList  | concat: taggy | concat: "," %} 
-  {%- endfor -%}
-{%- endfor -%}
-
-{% assign tagArray = tagList | split: "," | uniq  %}
-
-{%- for tag in tagArray -%}
-  <input type="checkbox" class="tagFilter" id={{ tag | slugify  }} checked> {{ tag }} &nbsp;
-{%- endfor -%}
+{% ListOfUniqTags audioshorts %}
 
 <table style="width: 70%; margin: auto;">
 <thead>

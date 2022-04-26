@@ -16,7 +16,20 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addShortcode("ListOfUniqTags", function(YAMLfile) {
-    return ``;
-  };
+    
+    let allTags = [];
+    let returnSTR = "";
+    
+    for (let i=0; i<YAMLfile.length; i++) {
+        allTags = allTags.concat(YAMLfile[i].tags);
+    }
+    
+    let uniqueTags = [...new Set(allTags)];
+   
+    for (let i=0; i<uniqueTags.length; i++) {
+      returnSTR += `<input type="checkbox" class="tagFilter" id="${uniqueTags[i]}" checked> ${uniqueTags[i]} &nbsp;`;
+    }
+    return `${returnSTR}`;
+  });
 
 };
