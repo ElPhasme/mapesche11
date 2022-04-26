@@ -1,0 +1,13 @@
+--- # Demos
+- location: here1
+  title: Demo banque
+  tags: [fun, serious]
+- location: here2
+  title: Répondeur
+  tags: [sad, serious]
+- location: here3
+  title: Pub
+  tags: [straight,plop]
+- location: here4
+  title: Pub CA
+  tags: [straight,spam]
