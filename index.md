@@ -4,9 +4,10 @@ title: Mapesche
 ---
 
 # Mapesche
-
-{% ListOfUniqTags audioshorts %}
-
+<div class="tagFilters">
+Filter demos: {% tagFilters audioshorts %}
+</div>
+<div class="tableWrap">
 <table style="width: 70%; margin: auto;">
 <thead>
     <tr>
@@ -21,4 +22,18 @@ title: Mapesche
 {% endfor %}
 </tbody>
 </table>
+</div>
 
+
+<div class="container">
+  <div class="four columns">
+    <img src="forest.webp" width="200px">
+  </div>
+  <div class="four columns">
+     &nbsp;
+  </div>
+  <div class="four columns">
+    <img src="mountain.jpg" widht="200px">
+  </div>
+
+</div>

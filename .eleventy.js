@@ -15,7 +15,7 @@ module.exports = function(eleventyConfig) {
             </tr>`;
   });
 
-  eleventyConfig.addShortcode("ListOfUniqTags", function(YAMLfile) {
+  eleventyConfig.addShortcode("tagFilters", function(YAMLfile) {
     
     let allTags = [];
     let returnSTR = "";
