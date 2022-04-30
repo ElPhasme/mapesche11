@@ -27,7 +27,7 @@ module.exports = function(eleventyConfig) {
     let uniqueTags = [...new Set(allTags)];
    
     for (let i=0; i<uniqueTags.length; i++) {
-      returnSTR += `<input type="checkbox" class="tagFilter" id="${uniqueTags[i]}" checked> ${uniqueTags[i]} &nbsp;`;
+      returnSTR += `<input type="checkbox" class="tagFilter" id="${uniqueTags[i]}" checked><label for="${uniqueTags[i]}">${uniqueTags[i]}</label>`;
     }
     return `${returnSTR}`;
   });
