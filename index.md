@@ -1,9 +1,9 @@
 ---
 layout: layout.html
-title: Mapesche
+title: mapesche
 ---
 
-# Mapesche
+# {{ title }}
 <div class="tagFilters">
 Filter demos: {% tagFilters audioshorts %}
 </div>
@@ -22,18 +22,4 @@ Filter demos: {% tagFilters audioshorts %}
 {% endfor %}
 </tbody>
 </table>
-</div>
-
-
-<div class="container">
-  <div class="four columns">
-    <img src="forest.webp" width="200px">
-  </div>
-  <div class="four columns">
-     &nbsp;
-  </div>
-  <div class="four columns">
-    <img src="mountain.jpg" widht="200px">
-  </div>
-
 </div>
