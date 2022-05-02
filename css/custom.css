@@ -17,6 +17,7 @@ body {
   width: 70%;
   margin:auto;
   display:flex;
+  justify-content: space-evenly;
 }
 
 .tagFilters > input {
@@ -33,14 +34,18 @@ input[type="checkbox"]:checked + label {
 }
 
 label::before {
-display: inline-block;
+    display: inline-block;
     padding: 2px 6px 2px 2px;
     content: "\f063";
 }
 
 .tableWrap {
   height: 300px;
-  border: 2px solid black;
+  border: 2px solid white;
+  border-radius: 20px;
+  box-shadow: 0 0 5px white, 0 0 20px hotpink, 0 0 10px pink, inset 0 0 5px white, inset 0 0 20px hotpink, inset 0 0 10px pink;
   overflow: auto;
   margin:auto;
+  width: 70%;
+  height: 50vh;
 }
