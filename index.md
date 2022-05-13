@@ -5,7 +5,8 @@ title: mapesche
 
 # {{ title }}
 <div class="tagFilters">
-Filter demos: {% tagFilters audioshorts %}
+Filter demos:
+{% tagFilters audioshorts %}
 </div>
 <div class="tableWrap">
 <table style="width: 70%; margin: auto;">
