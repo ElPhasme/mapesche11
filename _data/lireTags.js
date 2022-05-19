@@ -3,7 +3,7 @@ const ExcelJS = require('exceljs');
 
 const lireTags = async () => {
     const workbook = new ExcelJS.Workbook();
-    await workbook.xlsx.readFile("/opt/build/repo/Tags VO.xlsx");
+    await workbook.xlsx.readFile("Tags VO.xlsx");
     const worksheet = workbook.getWorksheet('Feuille2');
 
     const colonneTon = worksheet.getColumn(4).values;
