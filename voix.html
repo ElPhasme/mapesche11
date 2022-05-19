@@ -1,0 +1,27 @@
+---
+layout: layout.html
+---
+
+    <h1>Jukebox Voix Off</h1>
+	
+    <div class="neon">
+		<div class="filtres">
+			{% for ton in lireTags %}
+				<input type="checkbox" class="tagFilter" id="{{ ton }}" checked><label for="{{ ton }}">{{ ton }}</label>
+			{% endfor %}
+		</div>
+
+		{% for clipCategorie in lireClips %}
+    	<section>
+    		<h2>{{ clipCategorie.categorie }}</h2>
+			{% for clip in clipCategorie.clips %}
+			<figure data-tags="{{ clip.Tons }}">
+				<figcaption>{{ clip.Tons }} — {{ clip.Titre }} </figcaption>
+					<audio controls src="https://mapesche.com/jukebox/clips/{{ clip.Fichier }}.mp3">
+						Your browser does not support the <code>audio</code> element.
+					</audio>
+			</figure>
+			{% endfor %}
+		{% endfor %}
+		</section>
+    </div>

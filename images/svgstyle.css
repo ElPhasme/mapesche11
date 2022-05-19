@@ -1,0 +1,19 @@
+#layer6 {
+  animation-name: flicker;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+
+  @keyframes flicker {
+      25%, 75% {
+        opacity: 0;
+        stroke-opacity: 0;
+      }
+  
+      0%, 50%, 100% {  
+            stroke-opacity: 1;
+            opacity: 1;
+      }
+  }

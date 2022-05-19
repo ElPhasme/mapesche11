@@ -1,0 +1,443 @@
+/* Définition de toutes les polices */
+@font-face {
+    font-family: 'gotham_lightregular';
+    src: url('/fonts/gotham-light-webfont.woff2') format('woff2'),
+         url('/fonts/gotham-light-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('/fonts/Gotham-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('/fonts/gotham-medium-webfont.woff2') format('woff2'),
+         url('/fonts/gotham-medium-webfont.woff') format('woff');
+}
+
+
+/* Couleurs et style de texte pour toutes les pages */
+body {
+	background-color: #010101;
+	font-family: 'gotham_lightregular','Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+h1 {
+    font-family: 'gotham_lightregular', cursive;
+    font-size:24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+    color: hotpink;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+    h1 {
+         font-size:20px;
+    }
+}
+
+h2 {
+	font-family: 'gotham_lightregular','Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 1.1em;
+}
+
+p {
+	font-family: 'gotham_lightregular','Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+
+a {
+   /*color: rgb(14, 214, 221);
+    text-decoration: none; */
+    transition: all .3s ease-out; 
+    color: white;  
+}
+
+a:hover {
+    color: hotpink;
+}
+
+header {
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1100px) {
+    header {
+        background-color: #010101;
+    }
+}
+
+/* Menu de navigation */
+
+nav a {
+    color: white;
+	font-family:'Gotham-Medium', 'Open Sans', sans-serif;
+	font-size: 1em;
+    text-decoration: none;
+}
+
+
+/* Afficher les liens de navigation horizontalement et sans décoration*/
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+nav li {
+	padding-right: 1em;
+}
+
+
+.logo_accueil {
+	width: 10%;
+}
+
+.logo_accueil:hover {
+    filter: invert(48%) sepia(84%) saturate(7189%) hue-rotate(311deg) brightness(101%) contrast(99%);
+}
+
+@media screen and (max-width: 1100px) {
+    .logo_accueil {
+        width: 60px;
+    }
+}
+
+
+/* Conteneur central pour toutes les pages */
+main {
+ 	margin: auto;
+ 	width: 50%;
+ 	padding-top: 120px;
+  	display: flex;
+  	flex-direction: column;
+    justify-content: center;
+  	padding-bottom: 70px;
+  }
+
+
+@media screen and (max-width: 1100px) {
+    main {
+        width: 90%;
+        padding-top: 60px; 
+    }
+}
+
+
+
+/** Page d'accueil **/
+
+.titre_logo {
+    opacity: 0.6;
+}
+
+.logo_central {
+    height: 50vh;
+}
+
+@media screen and (max-width: 900px) {
+    .logo_central {
+ 
+}
+}
+
+/** Page Voix Off Jukebox**/
+
+.neon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 50px;
+    border: 0.1rem solid #FFD5FF;
+    border-radius: 30px;
+    box-shadow: 
+    0 0 0.1vw 0.2vw #FFD5FF,
+    0 0 0.2vw 0.4vw #C97272,
+    0 0   2vw 0.6vw #D42CCA,
+    
+    inset 0 0 2.0vw 0.6vw #D42CCA,
+    inset 0 0 0.2vw 0.2vw #C97272,
+    inset 0 0 0.4vw 0.2vw #FFD5FF;
+}
+
+main.neon {
+    margin-top: 100px;
+}
+
+.filtres {
+    width: 70%;
+    margin:auto;
+    display:flex;
+    justify-content: space-evenly;
+  }
+  
+  .filtres > input {
+    appearance: none;
+    margin: 10px;
+  }
+  
+  input[type="checkbox"] + label {
+    color:darkgrey;
+  }
+  input[type="checkbox"]:checked + label {
+    color:hotpink;
+    text-shadow: 0 0 10px white;
+
+@media screen and (max-width: 1100px) {
+    .neon {
+        padding: 10px;
+    }
+
+    main.neon {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section h2 {
+        padding-left: 40px;
+    }
+}
+
+figcaption {
+    color: teal;
+}
+
+/*** Page contact ***/
+
+.form_photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    .form_photo {
+        flex-direction: column-reverse;
+    }
+}
+
+form {
+    width: 100%;  
+    display: flex;
+    flex-direction: column;
+}
+
+form ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+form li {
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+}
+
+input[type="checkbox"] {
+   margin-top: 20px
+}
+ 
+input[type="submit"] {
+    color: white;  
+    align-self: flex-end;
+    border: 0rem solid #FFD5FF;
+    border-radius: 3px;
+    box-shadow: 
+    0 0 0.1vw 0.2vw #FFD5FF,
+    0 0 0.2vw 0.4vw #C97272,
+    0 0   2vw 0.6vw #D42CCA,
+    
+    inset 0 0 2.0vw 0.6vw #D42CCA,
+    inset 0 0 0.2vw 0.2vw #C97272,
+    inset 0 0 0.4vw 0.2vw #FFD5FF;
+}
+
+input[type="submit"]:hover {
+    color: black;
+    border: 0rem solid #22D7A4;
+    box-shadow: 0 0 0.1vw 0.2vw #22D7A4, 
+            0 0 0.2vw 0.4vw #C97272, 
+            0 0 2vw 0.6vw #228274, 
+
+            inset 0 0 2.0vw 0.6vw #228274, 
+            inset 0 0 0.2vw 0.2vw #C97272, 
+            inset 0 0 0.4vw 0.2vw #22D7A4;
+}
+
+
+@media screen and (max-width: 900px) {
+    form {
+        display: flex;
+        width: 100%;
+        
+    }
+
+    input[type="submit"] {
+        margin-bottom: 30px;
+        
+    }
+
+    .photo_micro {
+        display: none;
+}
+
+}
+
+textarea {
+    height: 100%;
+    width: 100%;
+}
+
+.note {
+    font-size: 12px;
+}
+
+.étoile {
+    color: hotpink;
+}
+
+.bloc_erreur {
+    width: 70%;
+    border: 3px solid hotpink;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    align-self: center;
+    padding: 10px;
+    background-color: lightgray;
+    font-family: 'Gotham-Medium', 'Open Sans', sans-serif;
+    color: black;
+}
+
+.bloc_erreur p {
+    color: black;
+    font-family: 'Gotham-Medium', 'Open Sans', sans-serif;
+    padding-left: 10px;
+}
+
+.bloc_erreur h2 {
+    color: black;
+    font-family: 'Gotham-Medium', 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    padding-left: 10px;
+}
+
+.photo_micro {
+  margin-top: 70px;
+  width: 30%;
+  border-radius: 5%;
+
+}
+
+
+/** Page studio **/
+.bullets_projets {
+	display: block;
+	margin: auto;
+	width: 240px;
+    padding: 20px 20px;
+    margin-top: 20px;
+}
+
+.bullets_projets ul {
+    list-style: circle inside; 
+    padding-left: 14px;
+}
+
+
+/** Page mentions legales **/
+.allume {
+    color: #ff0381;
+}
+
+/** Footer **/
+footer {
+    width: 100%;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    position: fixed;
+	bottom: 0;
+    background-color: #010101;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a {
+       color: white;
+
+}
+
+.reseaux_sociaux a:hover {
+    filter: invert(48%) sepia(84%) saturate(7189%) hue-rotate(311deg) brightness(101%) contrast(99%);
+}
+
+.reseaux_sociaux a {
+  margin: 0px 10px 0 0;
+}
+
+.reseaux_sociaux img {
+    width: 24px;
+}
+
+.soundcloud {
+    padding-left: 7px;
+}
+
+.mentions_legales {
+    font-family:'Gotham-Bold', 'Open Sans', sans-serif;
+    font-size: 1em;
+    padding-right: 20px;
+}
+
+.mentions_legales a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .page_index {
+        display: none;
+    }
+
+    footer {
+    padding-bottom: 2px;
+    padding-top: 2px;
+    height: 50px;
+    position: relative;
+    bottom: 0;
+  justify-content: center;
+  align-items: center;
+}
+    .reseaux_sociaux a {
+     margin: 0px 3px 0 0;
+}
+
+    .reseaux_sociaux img {
+    width: 18px;
+    padding-top: 5px;
+}
+    .soundcloud {
+    padding-left: 0px;
+}
+    .mentions_legales {
+    font-size: 16px;
+    margin-left: 5px;
+    
+}
+
+  
+}
+
+

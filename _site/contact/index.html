@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Marielle Peschet — Voix Off</title>
+	<link rel="icon" type="image/png" href="/images/logo_fav.svg">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<!--- Contenu du site -->
+<body>
+
+	<header class="img_accueil arrivee">
+		<a href="/"><img class="logo_accueil" src="/images/logo_white.svg" alt="petit logo marielle peschet voix off"></a>
+	
+
+		<nav>
+			<ul>
+				<li><a href="/voix/" class="allume">VOIX OFF</a></li>
+				<li><a href="/studio/">INFO</a></li>
+				<li><a href="/contact/">CONTACT</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+        
+	<h1>Contact</h1>
+
+	<p>Afin d'échanger sur votre projet et pour toute demande de devis, veuillez préciser : 			
+		<ul>
+			<li>le format (publicité, e-learning, liners, etc.),</li>
+			<li>le ton de voix souhaité (sérieux, naturel, souriant, etc.),</li>
+			<li>la durée ou le nombre de mots,</li>
+			<li>le support de diffusion (web, entreprise, radio, etc.).</li> 
+		</ul>
+	</p>
+	<p>
+	Envoyez un message depuis le formulaire ou directement à <a href="mailto:marielle@mapesche.com">marielle@mapesche.com</a>
+	</p>
+
+	<div class="form_photo">
+
+		<form method="POST">
+				<ul>
+					<li>Votre nom<br/>
+						<input type="text" name="nom"></input>
+					</li>
+					<li>Votre email<br/>
+						<input type="email" name="email"></input>
+					</li>
+					<li>Votre message<br/>
+						<textarea name="message" rows="4"></textarea>
+					</li>
+				</ul>
+				<ul>
+					<li>Le format du projet :
+						<select name="format">
+						<?php
+							foreach($liste_formats as $clef => $val) {
+								print("<option value=\"$clef\">$val</option>");
+							}
+						?>
+						</select>
+					</li>
+					<br />
+					<li>Le ton de voix souhaité :<br/>
+						<?php
+							foreach($liste_tons as $clef => $val) {
+							print("<input type=\"checkbox\" name=\"ton\" value=\"$clef\"/>$val<br/>");
+							}
+						?>
+					</li>
+				</ul>
+
+			<input type="submit" name="soum" value="Envoyer"></input><br/>
+		</form>
+
+	<img src="images/micro.jpg" class="photo_micro" alt="photo de micro" title="Micro" />
+		
+	</div>
+
+	</main>
+
+<!--Footer-->
+<footer>
+    <div class="reseaux_sociaux">
+      <a href="https://soundcloud.com/mapesche"><img src="/images/soundcloud1.svg" alt="Soundcloud" class="soundcloud"></a>
+      <a href="https://fr.linkedin.com/in/mariellepeschet"><img src="/images/linkedin.svg" alt="LinkedIn"></a>
+      <a href="https://www.instagram.com/_mapesche/" ><img src="/images/instagram.svg" alt="Instagram"></a>
+    </div>
+  
+    <div class="mentions_legales"><a href="/mentionslegales/">&#169;  2022</a></div>
+</footer>
+
+<script type="text/javascript" src="/scripts/scripts.js" defer></script>
+</body>
+</html>

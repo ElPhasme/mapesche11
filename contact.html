@@ -1,0 +1,58 @@
+---
+layout: layout.html
+---
+
+	<h1>Contact</h1>
+
+	<p>Afin d'échanger sur votre projet et pour toute demande de devis, veuillez préciser : 			
+		<ul>
+			<li>le format (publicité, e-learning, liners, etc.),</li>
+			<li>le ton de voix souhaité (sérieux, naturel, souriant, etc.),</li>
+			<li>la durée ou le nombre de mots,</li>
+			<li>le support de diffusion (web, entreprise, radio, etc.).</li> 
+		</ul>
+	</p>
+	<p>
+	Envoyez un message depuis le formulaire ou directement à <a href="mailto:marielle@mapesche.com">marielle@mapesche.com</a>
+	</p>
+
+	<div class="form_photo">
+
+		<form method="POST">
+				<ul>
+					<li>Votre nom<br/>
+						<input type="text" name="nom"></input>
+					</li>
+					<li>Votre email<br/>
+						<input type="email" name="email"></input>
+					</li>
+					<li>Votre message<br/>
+						<textarea name="message" rows="4"></textarea>
+					</li>
+				</ul>
+				<ul>
+					<li>Le format du projet :
+						<select name="format">
+						<?php
+							foreach($liste_formats as $clef => $val) {
+								print("<option value=\"$clef\">$val</option>");
+							}
+						?>
+						</select>
+					</li>
+					<br />
+					<li>Le ton de voix souhaité :<br/>
+						<?php
+							foreach($liste_tons as $clef => $val) {
+							print("<input type=\"checkbox\" name=\"ton\" value=\"$clef\"/>$val<br/>");
+							}
+						?>
+					</li>
+				</ul>
+
+			<input type="submit" name="soum" value="Envoyer"></input><br/>
+		</form>
+
+	<img src="images/micro.jpg" class="photo_micro" alt="photo de micro" title="Micro" />
+		
+	</div>
