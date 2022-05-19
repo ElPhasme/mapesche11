@@ -1,5 +1,5 @@
 ---
-layout: layout.html
+layout: layout.njk
 ---
 
     <h1>Jukebox Voix Off</h1>
@@ -7,7 +7,7 @@ layout: layout.html
     <div class="neon">
 		<div class="filtres">
 			{% for ton in lireTags %}
-				<input type="checkbox" class="tagFilter" id="{{ ton }}" checked><label for="{{ ton }}">{{ ton }}</label>
+				<input type="checkbox" class="tagFilter" id="{{ ton }}" {{ 'checked' if 'Souriant' in ton }}><label for="{{ ton }}">{{ ton }}</label>
 			{% endfor %}
 		</div>
 

@@ -17,14 +17,14 @@
 
 		<nav>
 			<ul>
-				<li><a href="/voix/" class="allume">VOIX OFF</a></li>
-				<li><a href="/studio/">INFO</a></li>
-				<li><a href="/contact/">CONTACT</a></li>
+				<li><a href="/voix/" class="{{ 'allume' if 'voix' in page.url }}">VOIX OFF</a></li>
+				<li><a href="/studio/"  class="{{ 'allume' if 'studio' in page.url }}">INFO</a></li>
+				<li><a href="/contact/"  class="{{ 'allume' if 'contact' in page.url }}">CONTACT</a></li>
 			</ul>
 		</nav>
 	</header>
 	<main>
-        {{ content }}
+        {{ content | safe }}
 	</main>
 
 <!--Footer-->

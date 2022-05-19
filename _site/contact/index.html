@@ -17,9 +17,9 @@
 
 		<nav>
 			<ul>
-				<li><a href="/voix/" class="allume">VOIX OFF</a></li>
-				<li><a href="/studio/">INFO</a></li>
-				<li><a href="/contact/">CONTACT</a></li>
+				<li><a href="/voix/" class="">VOIX OFF</a></li>
+				<li><a href="/studio/"  class="">INFO</a></li>
+				<li><a href="/contact/"  class="allume">CONTACT</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -41,7 +41,13 @@
 
 	<div class="form_photo">
 
-		<form method="POST" data-netlify="true">
+		<form name="contact" method="POST" data-netlify="true" netlify-honeypot="champAbot" data-netlify-recaptcha="true" action="/form_success/">
+			<p class="cachemoi">
+				<label>
+				  Ne remplissez pas ce champ: <input name="champAbot" />
+				</label>
+			</p>
+
 				<ul>
 					<li>Votre nom<br/>
 						<input type="text" name="nom"></input>
@@ -90,7 +96,7 @@
 						
 					</li>
 				</ul>
-
+				<!-- <div data-netlify-recaptcha="true"></div> -->
 			<input type="submit" name="soum" value="Envoyer"></input><br/>
 		</form>
 

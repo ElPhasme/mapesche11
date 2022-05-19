@@ -286,18 +286,15 @@ input[type="submit"]:hover {
     form {
         display: flex;
         width: 100%;
-        
     }
 
     input[type="submit"] {
         margin-bottom: 30px;
-        
     }
 
     .photo_micro {
         display: none;
-}
-
+    }
 }
 
 textarea {
