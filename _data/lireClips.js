@@ -3,7 +3,7 @@ const ExcelJS = require('exceljs');
 
 const lireClips = async () => {
     const workbook = new ExcelJS.Workbook();
-    await workbook.xlsx.readFile(".\\_data\\Tags VO.xlsx");
+    await workbook.xlsx.readFile("/opt/build/repo/_data/Tags VO.xlsx");
     const worksheet = workbook.getWorksheet('Feuille2');
 
     const colonneFichier = worksheet.getColumn(1).values;

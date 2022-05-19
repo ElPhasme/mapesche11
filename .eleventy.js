@@ -6,6 +6,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("scripts");
+  eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("fonts");
 
   eleventyConfig.addShortcode("musicPlayer", function(name, path, tags) {
     return `<tr id='tr-${slugify(name)}' data-tags='${slugify(tags.join("-"))}'>
@@ -15,15 +17,19 @@ module.exports = function(eleventyConfig) {
             </tr>`;
   });
 
-  eleventyConfig.addShortcode("tagFilters", function(YAMLfile) {
+  eleventyConfig.addShortcode("tagFilters", function(clipCategorie) {
     
-    let allTags = [];
     let returnSTR = "";
-    
-    for (let i=0; i<YAMLfile.length; i++) {
-        allTags = allTags.concat(YAMLfile[i].tags);
+    allTags = [];
+
+    for (clipCategorie in lireClips) {
+      for (clip in clipCategorie.clips) {
+        for (tag in clip.Tons) {
+          allTags.push(tag);
+        }
+      }
     }
-    
+
     let uniqueTags = [...new Set(allTags)];
    
     for (let i=0; i<uniqueTags.length; i++) {
