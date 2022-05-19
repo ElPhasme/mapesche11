@@ -18,7 +18,7 @@ layout: layout.html
 
 	<div class="form_photo">
 
-		<form method="POST">
+		<form method="POST" data-netlify="true">
 				<ul>
 					<li>Votre nom<br/>
 						<input type="text" name="nom"></input>
@@ -33,26 +33,22 @@ layout: layout.html
 				<ul>
 					<li>Le format du projet :
 						<select name="format">
-						<?php
-							foreach($liste_formats as $clef => $val) {
-								print("<option value=\"$clef\">$val</option>");
-							}
-						?>
+							{% for clipCategorie in lireClips %}
+								<option value="{{ clipCategorie.categorie }}">{{ clipCategorie.categorie }}</option>
+							{% endfor %}
 						</select>
 					</li>
 					<br />
 					<li>Le ton de voix souhaité :<br/>
-						<?php
-							foreach($liste_tons as $clef => $val) {
-							print("<input type=\"checkbox\" name=\"ton\" value=\"$clef\"/>$val<br/>");
-							}
-						?>
+						{% for ton in lireTags %}
+							<input type="checkbox" name="ton" value="{{ ton }}">{{ ton }}</br>
+						{% endfor %}
 					</li>
 				</ul>
 
 			<input type="submit" name="soum" value="Envoyer"></input><br/>
 		</form>
 
-	<img src="images/micro.jpg" class="photo_micro" alt="photo de micro" title="Micro" />
+	<img src="/images/micro.jpg" class="photo_micro" alt="photo de micro" title="Micro" />
 		
 	</div>

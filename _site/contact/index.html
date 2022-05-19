@@ -41,7 +41,7 @@
 
 	<div class="form_photo">
 
-		<form method="POST">
+		<form method="POST" data-netlify="true">
 				<ul>
 					<li>Votre nom<br/>
 						<input type="text" name="nom"></input>
@@ -56,27 +56,45 @@
 				<ul>
 					<li>Le format du projet :
 						<select name="format">
-						<?php
-							foreach($liste_formats as $clef => $val) {
-								print("<option value=\"$clef\">$val</option>");
-							}
-						?>
+							
+								<option value="Marketing">Marketing</option>
+							
+								<option value="Narration">Narration</option>
+							
+								<option value="Publicité">Publicité</option>
+							
+								<option value="Radio / Liners">Radio / Liners</option>
+							
+								<option value="Répondeur">Répondeur</option>
+							
 						</select>
 					</li>
 					<br />
 					<li>Le ton de voix souhaité :<br/>
-						<?php
-							foreach($liste_tons as $clef => $val) {
-							print("<input type=\"checkbox\" name=\"ton\" value=\"$clef\"/>$val<br/>");
-							}
-						?>
+						
+							<input type="checkbox" name="ton" value="#Explicatif">#Explicatif</br>
+						
+							<input type="checkbox" name="ton" value="#Souriant">#Souriant</br>
+						
+							<input type="checkbox" name="ton" value="#Sérieux">#Sérieux</br>
+						
+							<input type="checkbox" name="ton" value="#Naturel">#Naturel</br>
+						
+							<input type="checkbox" name="ton" value="#Posé">#Posé</br>
+						
+							<input type="checkbox" name="ton" value="#Rassurant">#Rassurant</br>
+						
+							<input type="checkbox" name="ton" value="#Dynamique">#Dynamique</br>
+						
+							<input type="checkbox" name="ton" value="#Complice">#Complice</br>
+						
 					</li>
 				</ul>
 
 			<input type="submit" name="soum" value="Envoyer"></input><br/>
 		</form>
 
-	<img src="images/micro.jpg" class="photo_micro" alt="photo de micro" title="Micro" />
+	<img src="/images/micro.jpg" class="photo_micro" alt="photo de micro" title="Micro" />
 		
 	</div>
 
