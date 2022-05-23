@@ -16,7 +16,7 @@ layout: layout.njk
     		<h2>{{ clipCategorie.categorie }}</h2>
 			{% for clip in clipCategorie.clips %}
 			<figure data-tags="{{ clip.Tons }}">
-				<figcaption>{{ clip.Tons }} — {{ clip.Titre }} </figcaption>
+				<figcaption>{{ clip.Titre }}<BR /><span class="tons">{{ clip.Tons }}</span> </figcaption>
 					<audio controls src="https://mapesche.com/jukebox/clips/{{ clip.Fichier }}.mp3"  preload="none">
 						Your browser does not support the <code>audio</code> element.
 					</audio>
